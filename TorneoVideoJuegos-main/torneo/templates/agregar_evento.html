@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro para recibir información del torneo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            display: block;
+            text-align: center; /* Alineación centrada */
+        }
+        input[type="email"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            border: 2px solid #007bff;
+            background-color: #333333;
+            color: #ffffff;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        input[type="email"]:focus {
+            border-color: #0056b3;
+            outline: none;
+        }
+        .btn-mas-info {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 18px;
+            border-radius: 25px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+        .btn-mas-info:hover {
+            background-color: #0056b3;
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5);
+        }
+        .btn-mas-info:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Regístrate para recibir información del torneo!</h1>
+        <form method="post" action="{% url 'confirmacion_registro' %}">
+            {% csrf_token %}
+            <label for="email">Ingresa tu correo electrónico:</label>
+            <br>
+            <input type="email" id="email" name="email" required placeholder="example@domain.com">
+            <br>
+            <input type="submit" value="Registrarse" class="btn btn-mas-info">
+        </form>
+    </div>
+    <footer class="text-center mt-5 fade-in">
+        <p>&copy; 2024 TorneosGamingsRD. Todos los derechos reservados.</p>
+      </footer>
+</body>
+</html>
