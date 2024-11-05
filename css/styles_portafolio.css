@@ -1,4 +1,4 @@
-/* Estilos generales en modo claro (por defecto) */
+/* Estilos generales */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #ffffff;
@@ -9,117 +9,48 @@ body {
 /* Modo oscuro */
 body.dark-mode {
   background-color: #121212;
-  color: #ffffff;
+  color: #000000;
 }
 
-/* Modo oscuro - Navbar y Footer */
+/* Navbar y Footer en modo oscuro */
 body.dark-mode .navbar,
 body.dark-mode footer {
   background-color: #333333;
   color: #ffffff;
 }
 
-/* Modo oscuro - Botón */
-body.dark-mode #darkModeToggle {
-  background-color: #555;
-  color: #ffffff;
-}
-
-/* Modo oscuro - Sección principal */
-body.dark-mode .section {
-  background-color: #2a2a2a;
-  color: #ffffff;
-}
-
-/* Modo oscuro - Estilo de las tarjetas */
-body.dark-mode .card {
-  background-color: #3a3a3a;
+/* Botón de alternancia de modo oscuro */
+#darkModeToggle {
+  background-color: #007bff;
   color: #ffffff;
   border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-/* Modo oscuro - Jumbotron */
-body.dark-mode .jumbotron {
+#darkModeToggle:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos del jumbotron */
+.jumbotron {
   background-color: #333333;
   color: #ffffff;
 }
 
-/* Modo oscuro - Títulos de sección */
-body.dark-mode .section-title {
-  color: #00aaff;
-}
-
-/* Estilos generales en modo claro (por defecto) */
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #ffffff;
-  color: #121212;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Modo oscuro */
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-/* Modo oscuro - Navbar y Footer */
-body.dark-mode .navbar,
-body.dark-mode footer {
-  background-color: #333333;
-  color: #ffffff;
-}
-
-/* Modo oscuro - Botón */
-body.dark-mode #darkModeToggle {
-  background-color: #555;
-  color: #ffffff;
-}
-
-/* Modo oscuro - Sección principal */
-body.dark-mode .section {
-  background-color: #2a2a2a;
-  color: #ffffff;
-}
-
-/* Modo oscuro - Estilo de las tarjetas */
-body.dark-mode .card {
-  background-color: #3a3a3a;
-  color: #ffffff;
-  border: none;
-}
-
-/* Modo oscuro - Jumbotron */
-body.dark-mode .jumbotron {
-  background-color: #333333;
-  color: #ffffff;
-}
-
-/* Modo oscuro - Títulos de sección */
-body.dark-mode .section-title {
-  color: #00aaff;
-}
-
-/* Imagenes de carrusel */
-.carousel-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+/* Carrusel de juegos */
 .carousel-inner img {
-  max-height: 300px;
-  width: auto;
-  padding: 10px;
+  max-height: 1000px;
   object-fit: cover;
 }
 
-/* Estilo del navbar */
-.navbar-brand {
-  font-weight: bold;
+.carousel-caption h5 {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
 }
 
-/* Sección general */
+/* Estilos de secciones */
 .section {
   padding: 20px;
   margin-top: 20px;
@@ -128,24 +59,10 @@ body.dark-mode .section-title {
   transition: background-color 0.3s;
 }
 
-.section:hover {
-  background-color: #e9ecef;
-}
-
-/* Estilo de los títulos de sección */
 .section-title {
   font-size: 2em;
   color: #007bff;
   font-weight: bold;
-}
-
-/* Tarjetas en modo claro */
-.card {
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
 }
 
 /* Footer */
@@ -157,60 +74,12 @@ footer a:hover {
   color: #007bff;
 }
 
-.big-btn {
-  display: block;
-  width: 200px;
-  margin: 0 auto;
-}
-
-/* Estilos generales para modo claro */
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #ffffff;
-  color: #121212;
-  transition: background-color 0.3s, color 0.3s;
-  margin: 0;
-  padding: 0;
-}
-
-header, main {
-  padding: 20px;
-  text-align: center;
-}
-
-.toggle-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* Botón de Modo Oscuro */
-#darkModeToggle {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-#darkModeToggle:hover {
-  background-color: #0056b3;
-}
-
-/* Estilos para modo oscuro */
-body.dark-mode {
-  background-color: #121212;
+/* Íconos del footer */
+footer .bi {
+  font-size: 2rem;
   color: #ffffff;
 }
 
-body.dark-mode header,
-body.dark-mode main {
-  background-color: #1e1e1e;
-}
-
-body.dark-mode #darkModeToggle {
-  background-color: #555555;
-  color: #ffffff;
+footer .bi:hover {
+  color: #007bff;
 }
